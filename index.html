@@ -30,6 +30,7 @@
 </section>
 
 <script>
+window.addEventListener('pageshow', function() { document.body.classList.remove('fade-out'); });
 document.addEventListener('click', function(e) {
   var a = e.target.closest('a');
   if (!a || !a.href || a.target === '_blank' || a.origin !== location.origin) return;
