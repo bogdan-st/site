@@ -572,95 +572,6 @@ section.hero-landing .hero-links a:nth-child(4) {
   transform: translateY(-2px);
 }
 
-/* ========== Resume ========== */
-
-.resume h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  margin-top: 3rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent-light);
-}
-
-.resume h2:first-child {
-  margin-top: 0;
-}
-
-.resume-entry {
-  margin-bottom: 2rem;
-}
-
-.resume-entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.resume-entry-header h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.resume-company {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: 0.15rem;
-}
-
-.resume-date {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 500;
-  white-space: nowrap;
-  padding-top: 0.15rem;
-}
-
-.resume-list {
-  list-style: none;
-  padding: 0;
-}
-
-.resume-list li {
-  color: var(--text-light);
-  font-size: 0.98rem;
-  line-height: 1.7;
-  padding-left: 1.25rem;
-  position: relative;
-  margin-bottom: 0.5rem;
-}
-
-.resume-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.5;
-}
-
-.resume-skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.resume-skill-group h4 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
-}
-
 /* ========== Footer ========== */
 
 .footer {
@@ -717,9 +628,6 @@ section.hero-landing .hero-links a:nth-child(4) {
     padding: 0 2rem;
   }
 
-  .resume-skills {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  }
 }
 
 /* Mobile */
@@ -841,23 +749,8 @@ section.hero-landing .hero-links a:nth-child(4) {
     align-items: center;
   }
 
-  .resume-entry-header {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .resume-date {
-    white-space: normal;
-  }
-
-  .resume-skills {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
   .story h2,
-  .slides-section h2,
-  .resume h2 {
+  .slides-section h2 {
     font-size: 1.3rem;
   }
 }
@@ -929,10 +822,6 @@ section.hero-landing .hero-links a:nth-child(4) {
 
   .page-header h1 {
     font-size: 1.75rem;
-  }
-
-  .resume-skills {
-    grid-template-columns: 1fr;
   }
 
   .footer {
