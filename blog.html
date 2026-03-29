@@ -37,5 +37,17 @@
 <footer class="footer">
   <a href="https://github.com/bogdan-st">github.com/bogdan-st</a>
 </footer>
+
+<script>
+window.addEventListener('pageshow', function() { document.body.classList.remove('fade-out'); });
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a || !a.href || a.target === '_blank' || a.origin !== location.origin) return;
+  e.preventDefault();
+  var href = a.href;
+  document.body.classList.add('fade-out');
+  setTimeout(function() { location.href = href; }, 200);
+});
+</script>
 </body>
 </html>
