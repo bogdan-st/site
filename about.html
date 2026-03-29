@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Bogdan Stancu</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Bogdan Stancu</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <div class="nav-links">
+    <a href="about.html" class="active">About</a>
+    <a href="talks.html">Talks</a>
+    <a href="blog.html">Blog</a>
+    <a href="resume.html">Resume</a>
+    <a href="https://github.com/bogdan-st">GitHub</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>About</h1>
+</div>
+
+<div class="section">
+  <div class="about-text">
+    <p>
+      Most of my days revolve around OpenTelemetry, Prometheus, and making sure metrics and
+      traces actually work at scale across a lot of Kubernetes clusters. I'm a triager on the
+      <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">OpenTelemetry Collector Contrib</a>
+      project, where I review issues and PRs and maintain
+      <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen">telemetrygen</a>.
+      I also contribute to other parts of the OTel ecosystem, kube-prometheus-stack, and Cortex.
+    </p>
+    <p>
+      Outside of work, I enjoy speaking at conferences and sharing what I've learned
+      along the way. I also have an Airedale Terrier named Terry who occasionally
+      makes it into my slides.
+    </p>
+  </div>
+  <div class="tags">
+    <span class="tag" style="color:#00ADD8;background:#e6f7fc">Go</span>
+    <span class="tag" style="color:#3776AB;background:#e8f0f8">Python</span>
+    <span class="tag" style="color:#425CC7;background:#eaecf8">OpenTelemetry</span>
+    <span class="tag" style="color:#E6522C;background:#fdeee9">Prometheus</span>
+    <span class="tag" style="color:#3B697E;background:#e8f0f3">Cortex</span>
+    <span class="tag" style="color:#F46800;background:#fef0e5">Grafana</span>
+    <span class="tag" style="color:#326CE5;background:#e9eff9">Kubernetes</span>
+    <span class="tag" style="color:#0F1689;background:#e7e8f4">Helm</span>
+    <span class="tag" style="color:#EF7B4D;background:#fdf1eb">ArgoCD</span>
+    <span class="tag" style="color:#FF9900;background:#fff4e5">AWS</span>
+    <span class="tag" style="color:#0078D4;background:#e5f1fb">Azure</span>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="https://github.com/bogdan-st">github.com/bogdan-st</a>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a || !a.href || a.target === '_blank' || a.origin !== location.origin) return;
+  e.preventDefault();
+  var href = a.href;
+  document.body.classList.add('fade-out');
+  setTimeout(function() { location.href = href; }, 200);
+});
+</script>
+</body>
+</html>
