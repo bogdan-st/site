@@ -4,8 +4,8 @@ Slides, demos, and resources from my talks on observability, distributed systems
 
 ## Talks
 
-- **Freedom Through Boundaries: Building Configurations That Age Well** — KubeCon EU 2026, Amsterdam / ContainerDays London 2026
-- **OpenTelemetry: You Can't YAML Your Way Out Of This** — DevFest Berlin 2025
+- **Freedom Through Boundaries: Building Configurations That Age Well** | KubeCon EU 2026, Amsterdam / ContainerDays London 2026
+- **OpenTelemetry: You Can't YAML Your Way Out Of This** | DevFest Berlin 2025
 
 ## Website
 
