@@ -1,6 +1,6 @@
 # site
 
-Personal website with talks, resume, and blog. Built with plain HTML and CSS, hosted on GitHub Pages.
+Personal website with talks, resume, and blog. Built with plain HTML and CSS, hosted on GitHub Pages at [bogdan-st.github.io/site](https://bogdan-st.github.io/site/).
 
 ## Talks
 
