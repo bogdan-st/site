@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Bogdan Stancu</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Bogdan Stancu</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="talks.html">Talks</a>
+    <a href="blog.html">Blog</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="https://github.com/bogdan-st">GitHub</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Resume</h1>
+</div>
+
+<div class="section resume">
+
+  <h2>Experience</h2>
+
+  <div class="resume-entry">
+    <div class="resume-entry-header">
+      <div>
+        <h3>Senior Observability Software Engineer</h3>
+        <p class="resume-company">Adobe, Bucharest</p>
+      </div>
+      <span class="resume-date">Apr 2022 &ndash; Present</span>
+    </div>
+    <ul class="resume-list">
+      <li>Co-drive the organization-wide migration from Prometheus to OpenTelemetry, making OTel the default for all new deployments across Adobe.</li>
+      <li>Build custom OpenTelemetry components including authentication extensions and deployment tracking processors. Champion open source within the team.</li>
+      <li>Develop telemetry collection packages based on Prometheus and OpenTelemetry, with over a thousand new deployments each year, reducing onboarding time for a fully functional observability stack by over 90%.</li>
+      <li>Primary maintainer in the EU timezone for the metrics backend, running across many Kubernetes clusters on multiple cloud providers, ingesting tens of millions of samples per second.</li>
+      <li>Work across the full stack (UI and backend) on a self-service tool that automatically generates metrics, dashboards, and alerts based on user-defined SLOs, requiring no code changes from teams.</li>
+      <li>Maintain a distributed tracing backend ingesting millions of spans per second from thousands of services, ensuring reliability under unstable loads and traffic spikes.</li>
+    </ul>
+  </div>
+
+  <div class="resume-entry">
+    <div class="resume-entry-header">
+      <div>
+        <h3>Core Services Engineer</h3>
+        <p class="resume-company">Adobe, Bucharest</p>
+      </div>
+      <span class="resume-date">Apr 2021 &ndash; Apr 2022</span>
+    </div>
+    <ul class="resume-list">
+      <li>Maintained and operated a Spinnaker-based continuous delivery platform used for production deployments.</li>
+      <li>Managed core infrastructure: Kafka, RabbitMQ, Prometheus, Grafana, DNS, Git, Memcached, SaltStack.</li>
+    </ul>
+  </div>
+
+  <h2>Community &amp; Speaking</h2>
+
+  <div class="resume-entry">
+    <div class="resume-entry-header">
+      <div>
+        <h3>Triager</h3>
+        <p class="resume-company">OpenTelemetry / opentelemetry-collector-contrib</p>
+      </div>
+    </div>
+    <ul class="resume-list">
+      <li>Review and triage issues/PRs. Codeowner for telemetrygen.</li>
+      <li>Additional contributions to other OpenTelemetry ecosystem repositories, kube-prometheus-stack and Cortex.</li>
+    </ul>
+  </div>
+
+  <div class="resume-entry">
+    <div class="resume-entry-header">
+      <div>
+        <h3>Talks</h3>
+      </div>
+    </div>
+    <ul class="resume-list">
+      <li>"Building Configurations That Last" at KubeCon EU 2026 &amp; ContainerDays London 2026.</li>
+      <li>"OpenTelemetry: You Can't YAML Your Way Out Of This" at DevFest Berlin 2025.</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+
+  <div class="resume-skills">
+    <div class="resume-skill-group">
+      <h4>Languages</h4>
+      <div class="tags">
+        <span class="tag" style="color:#00ADD8;background:#e6f7fc">Golang</span>
+        <span class="tag" style="color:#3776AB;background:#e8f0f8">Python</span>
+        <span class="tag" style="color:#4EAA25;background:#ecf7e8">Bash</span>
+      </div>
+    </div>
+    <div class="resume-skill-group">
+      <h4>Observability</h4>
+      <div class="tags">
+        <span class="tag" style="color:#425CC7;background:#eaecf8">OpenTelemetry</span>
+        <span class="tag" style="color:#E6522C;background:#fdeee9">Prometheus</span>
+        <span class="tag" style="color:#3B697E;background:#e8f0f3">Cortex</span>
+        <span class="tag" style="color:#F46800;background:#fef0e5">Grafana</span>
+        <span class="tag" style="color:#F05A28;background:#feede7">Tempo</span>
+      </div>
+    </div>
+    <div class="resume-skill-group">
+      <h4>Infrastructure</h4>
+      <div class="tags">
+        <span class="tag" style="color:#326CE5;background:#e9eff9">Kubernetes</span>
+        <span class="tag" style="color:#0F1689;background:#e7e8f4">Helm</span>
+        <span class="tag" style="color:#EF7B4D;background:#fdf1eb">ArgoCD</span>
+      </div>
+    </div>
+    <div class="resume-skill-group">
+      <h4>Data &amp; Messaging</h4>
+      <div class="tags">
+        <span class="tag" style="color:#4169E1;background:#eaeff9">PostgreSQL</span>
+        <span class="tag" style="color:#419EDA;background:#eaf4fb">etcd</span>
+        <span class="tag" style="color:#231F20;background:#ebebeb">Kafka</span>
+      </div>
+    </div>
+    <div class="resume-skill-group">
+      <h4>Cloud</h4>
+      <div class="tags">
+        <span class="tag" style="color:#FF9900;background:#fff4e5">AWS</span>
+        <span class="tag" style="color:#0078D4;background:#e5f1fb">Azure</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Education</h2>
+
+  <div class="resume-entry">
+    <div class="resume-entry-header">
+      <div>
+        <h3>Bachelor of Science, Computer Science</h3>
+        <p class="resume-company">Faculty of Automatic Control and Computer Science, Politehnica Bucharest</p>
+      </div>
+      <span class="resume-date">2017 &ndash; 2021</span>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <a href="https://github.com/bogdan-st">github.com/bogdan-st</a>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a || !a.href || a.target === '_blank' || a.origin !== location.origin) return;
+  e.preventDefault();
+  var href = a.href;
+  document.body.classList.add('fade-out');
+  setTimeout(function() { location.href = href; }, 200);
+});
+</script>
+</body>
+</html>

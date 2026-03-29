@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks | Bogdan Stancu</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Bogdan Stancu</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="talks.html" class="active">Talks</a>
+    <a href="blog.html">Blog</a>
+    <a href="resume.html">Resume</a>
+    <a href="https://github.com/bogdan-st">GitHub</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Talks</h1>
+</div>
+
+<div class="section">
+  <div class="talk-cards">
+    <a href="talks/kubecon-eu-2026.html" class="talk-card">
+      <h3>Freedom Through Boundaries: Building Configurations That Age Well</h3>
+      <div class="talk-card-venues">
+        <span class="venue-badge">KubeCon EU 2026, Amsterdam</span>
+        <span class="venue-badge">ContainerDays, London 2026</span>
+      </div>
+      <p>How well-defined boundaries in Helm charts and OTel Collector configs lead to more freedom, not less. Featuring Terry the dog.</p>
+      <span class="talk-card-link">Read more &rarr;</span>
+    </a>
+    <a href="talks/devfest-berlin-2025.html" class="talk-card">
+      <h3>OpenTelemetry: You Can't YAML Your Way Out Of This</h3>
+      <div class="talk-card-venues">
+        <span class="venue-badge">DevFest, Berlin 2025</span>
+      </div>
+      <p>The journey from copy pasting Collector configs to understanding the codebase and building custom components.</p>
+      <span class="talk-card-link">Read more &rarr;</span>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="https://github.com/bogdan-st">github.com/bogdan-st</a>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a || !a.href || a.target === '_blank' || a.origin !== location.origin) return;
+  e.preventDefault();
+  var href = a.href;
+  document.body.classList.add('fade-out');
+  setTimeout(function() { location.href = href; }, 200);
+});
+</script>
+</body>
+</html>
