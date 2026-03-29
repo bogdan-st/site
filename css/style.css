@@ -180,6 +180,35 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
+/* Story */
+.story {
+  margin-bottom: 3rem;
+}
+
+.story h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.story h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.story p {
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+  font-size: 1.02rem;
+}
+
+.story-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
 /* Links */
 .content a {
   color: var(--accent);
