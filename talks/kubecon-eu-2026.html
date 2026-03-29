@@ -48,6 +48,49 @@
     training (and strict schemas) enable off-leash freedom.
   </p>
 
+  <div class="story">
+    <h2>The Story</h2>
+
+    <p>
+      I have a dog named Terry. He's an Airedale Terrier, and he's been in training for almost
+      his entire life. The thing I've learned from training him is that freedom isn't about having
+      no rules. It's the opposite. The reason I can trust Terry off leash is because he's had
+      years of strict, consistent boundaries. That same idea applies to how we design
+      configurations. When your Helm chart or your Collector config clearly defines what it
+      accepts and rejects everything else, you're not limiting your users. You're giving them
+      confidence that what they deploy will actually work.
+    </p>
+
+    <p>
+      I walk through a story that will feel familiar to anyone who's maintained a Helm chart.
+      You start small: a nice little chart that deploys three collectors, one per signal. Then
+      a user asks to mount their own secrets. Then security wants External Secrets Operator
+      support. Then someone needs a feature flag for internal testing. Before you know it, your
+      values file is over a thousand lines, options contradict each other, and nobody wants to
+      touch it. We avoided breaking changes because we were afraid users would be upset, so
+      we stayed on v1.0.x forever. The config grew but never healed. We only tested the defaults,
+      so bugs depended on the exact shape of someone's config. We had no changelog, so users
+      had to diff commits to figure out what changed. And we ended up writing documentation like
+      "DO NOT use with externalSecrets unless you also set legacyMode," which is a sign that
+      your design has failed and your docs are doing the job your validation should be doing.
+    </p>
+
+    <p>
+      The second half is about what I think we should do instead. Only accept what you intend
+      to support and reject everything else at install time. Design the config around what the
+      user wants to happen, not how your internals work. Make sure the same config always
+      produces the same outcome. Treat breaking changes as planned events with proper deprecation
+      and migration paths instead of something to avoid at all costs. Test every combination of
+      options, not just the happy path. Reject unknown fields instead of silently ignoring typos.
+      Give users a way to see the final resolved config. And make upgrades boring through
+      compatibility matrices and upgrade guides. People don't skip upgrades because they're
+      lazy. They skip them because they're afraid. Just like Terry: boundaries enable freedom.
+      Not just for users or maintainers, but for the whole ecosystem.
+    </p>
+  </div>
+
+  <hr class="story-divider">
+
   <h2>Slides</h2>
   <div class="slides-gallery">
     <img src="../slides/kubecon-eu-2026/Slide1.png" alt="Slide 1" loading="lazy">

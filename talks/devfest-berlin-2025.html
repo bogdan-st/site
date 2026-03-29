@@ -45,6 +45,47 @@
     and when you need to go beyond YAML to solve real observability problems.
   </p>
 
+  <div class="story">
+    <h2>The Story</h2>
+
+    <p>
+      We've all seen it. Someone deploys Kafka from a Helm chart and calls it done. Someone
+      else spins up Postgres with no backups and celebrates a successful connection. I've
+      been there too. The OpenTelemetry Collector is easy to get started with: it has a clean
+      pipeline architecture, you configure it entirely through YAML, and within an afternoon
+      you can have telemetry flowing. That simplicity is great, but it's also a trap. It makes
+      it easy to confuse "running" with "understood." We follow what other companies do, we
+      feel pressure to use the "right" tools, and we trust abstractions to handle the details.
+      Until they don't.
+    </p>
+
+    <p>
+      I think of the learning curve as three levels, and at Adobe we went through all of them.
+      At level one, we copy pasted configs, relied on defaults, and built a nice architecture
+      with three separate collector deployments to avoid noisy neighbors. It looked great on a
+      diagram but fell apart at scale: backend outages, memory exhaustion, CPU spikes. At level
+      two, we stayed in the YAML bubble and tried to fix things through configuration. We tweaked
+      queue sizes, set resource limits, added memory limiters. Things improved but kept breaking
+      in new ways, because we were still guessing. We felt like we understood the system, but we
+      didn't. At level three, we got tired of guessing and opened the source code. We learned how
+      the Collector's core and contrib repositories are structured, where components are defined,
+      and how things actually work under the hood.
+    </p>
+
+    <p>
+      The payoff of getting to level three showed up when we hit an authentication problem that
+      no amount of YAML could solve. Our first collector in the chain was returning a 200 to
+      the application, but the second one was getting a 401 from the backend. The app thought
+      everything was fine while data was silently being dropped. Because we understood the
+      codebase at that point, we built a custom Receiver Auth Extension that propagated the
+      error correctly. That's only possible when you treat OpenTelemetry as a framework you can
+      extend, not a product you just configure. Everyone starts with copy paste and that's
+      completely fine. Just don't stop there.
+    </p>
+  </div>
+
+  <hr class="story-divider">
+
   <h2>Slides</h2>
   <div class="slides-gallery">
     <img src="../slides/devfest-berlin-2025/Slide1.png" alt="Slide 1" loading="lazy">
