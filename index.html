@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bogdan Stancu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1>Bogdan Stancu</h1>
+    <p>Observability &amp; OpenTelemetry</p>
+  </div>
+
+  <nav>
+    <div class="nav-section">
+      <div class="nav-section-title">Home</div>
+      <a href="index.html" class="active">About me</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Talks</div>
+      <a href="talks/kubecon-eu-2026.html">KubeCon EU 2026 &mdash; Freedom Through Boundaries</a>
+      <a href="talks/devfest-berlin-2025.html">DevFest Berlin 2025 &mdash; You Can't YAML Your Way Out</a>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="https://github.com/bogdan-st">GitHub</a>
+  </div>
+</aside>
+
+<main class="content">
+  <h1>Hey, I'm Bogdan</h1>
+  <p>
+    I'm a software engineer at Adobe working on observability. Most of my days revolve around
+    OpenTelemetry, Prometheus, and making sure metrics and traces actually work at scale across
+    a lot of Kubernetes clusters.
+  </p>
+  <p>
+    I'm a triager on the
+    <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">OpenTelemetry Collector Contrib</a>
+    project, where I review issues and PRs and maintain
+    <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen">telemetrygen</a>.
+    I also contribute to other parts of the OTel ecosystem, kube-prometheus-stack, and Cortex.
+  </p>
+  <p>
+    Outside of work, I enjoy speaking at conferences and sharing what I've learned
+    along the way. I also have an Airedale Terrier named Terry who occasionally
+    makes it into my slides.
+  </p>
+
+  <h2>What I work with</h2>
+  <div class="tags">
+    <span class="tag">Go</span>
+    <span class="tag">Python</span>
+    <span class="tag">OpenTelemetry</span>
+    <span class="tag">Prometheus</span>
+    <span class="tag">Cortex</span>
+    <span class="tag">Grafana</span>
+    <span class="tag">Kubernetes</span>
+    <span class="tag">Helm</span>
+    <span class="tag">ArgoCD</span>
+    <span class="tag">AWS</span>
+    <span class="tag">Azure</span>
+  </div>
+
+  <h2>Talks</h2>
+  <p>
+    <a href="talks/kubecon-eu-2026.html"><strong>Freedom Through Boundaries: Building Configurations That Age Well</strong></a><br>
+    KubeCon EU 2026, Amsterdam &middot; ContainerDays, London 2026
+  </p>
+  <p>
+    <a href="talks/devfest-berlin-2025.html"><strong>OpenTelemetry: You Can't YAML Your Way Out Of This</strong></a><br>
+    DevFest, Berlin 2025
+  </p>
+</main>
+
+</body>
+</html>
